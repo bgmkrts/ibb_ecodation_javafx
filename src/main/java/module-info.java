@@ -44,32 +44,32 @@ module com.hamitmizrak.ibb_ecodation_javafx {
     // Paket Erişimlerine İzin vermek
     // `opens` ifadesi, bir paketin runtime'da (çalışma zamanında) refleksiyon (reflection) kullanılarak erişilebilir olmasını sağlar.
     // Ana paket (Root package) açılıyor, böylece FXML dosyalarından erişilebilir.
-    opens com.hamitmizrak.ibb_ecodation_javafx to javafx.fxml;
+    opens com.begumkaratas.ibb_ecodation_javafx to javafx.fxml;
 
     // DTO (Data Transfer Object) paketinin içeriği, JavaFX bileşenleri ve Lombok tarafından erişilebilir olmalıdır.
-    opens com.hamitmizrak.ibb_ecodation_javafx.dto to javafx.base, lombok;
+    opens com.begumkaratas.ibb_ecodation_javafx.dto to javafx.base, lombok;
 
     // Controller sınıfları FXML tarafından kullanılacağı için açılması gerekiyor.
-    opens com.hamitmizrak.ibb_ecodation_javafx.controller to javafx.fxml;
+    opens com.begumkaratas.ibb_ecodation_javafx.controller to javafx.fxml;
 
     // DAO (Data Access Object) sınıfları, SQL bağlantısı kullandığı için açılıyor.
-    opens com.hamitmizrak.ibb_ecodation_javafx.dao to java.sql;
+    opens com.begumkaratas.ibb_ecodation_javafx.dao to java.sql;
 
     // Veritabanı bağlantısı sağlayan sınıfların da SQL modülüne açık olması gerekiyor.
-    opens com.hamitmizrak.ibb_ecodation_javafx.database to java.sql;
+    opens com.begumkaratas.ibb_ecodation_javafx.database to java.sql;
 
     // #####################################################################
     // Paket dışa aktarmak
     // `exports` ifadesi, paketin diğer modüller tarafından erişilebilir olmasını sağlar.
 
     // DAO sınıflarını dışarıya açıyoruz. Böylece başka modüller veritabanı işlemlerini çağırabilir.
-    exports com.hamitmizrak.ibb_ecodation_javafx.dao;
+    exports com.begumkaratas.ibb_ecodation_javafx.dao;
 
     // // Veritabanı bağlantı paketini dış dünyaya açıyoruz. Diğer modüller DB bağlantısını kullanabilir.
-    exports com.hamitmizrak.ibb_ecodation_javafx.database;
+    exports com.begumkaratas.ibb_ecodation_javafx.database;
 
     // Ana paketi dış dünyaya açıyoruz. Diğer modüller bu paketin içeriğini kullanabilir.
-    exports com.hamitmizrak.ibb_ecodation_javafx;
+    exports com.begumkaratas.ibb_ecodation_javafx;
 }
 
 //Default
